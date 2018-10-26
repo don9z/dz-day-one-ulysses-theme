@@ -1,4 +1,10 @@
 /*
+    dz_DayOne
+
+    A theme inherit from Day One Ulysses Theme.
+
+    ---- origin comment
+
     Day One
 
     A theme to mimic the [Day One](http://dayoneapp.com/) default theme.
@@ -39,9 +45,15 @@ h2 {
     font-weight: bold;
 }
 
+h2:before {
+    content: '';
+    display: block;
+    border: 1px dashed #d0d0d0;
+    margin-bottom: 1em;
+}
+
 h3 {
   font-weight: normal;
-  color: #ea4c89;
   font-size: 1em;
 }
 
@@ -49,7 +61,7 @@ h4 {
   font-weight: normal;
   color: #999;
   text-transform: uppercase;
-  font-size: 1.1em;
+  font-size: .9em;
 }
 
 h5, h6 {
@@ -82,6 +94,8 @@ blockquote {
     border-left: solid .4em #ddd;
     padding-left: 10px;
     quotes: none;
+    color: #4a4a4a;
+    font-style: italic;
 }
 strong, dfn {font-weight:bold; color: #252525;}
 em, dfn {font-style:italic;}
