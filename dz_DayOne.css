@@ -79,6 +79,11 @@ h6 {
   color: #AAA;
 }
 
+mark {
+    text-decoration: underline;
+    background-color: transparent;
+}
+
 img {width: 100%; border-radius: 5px; display: block; margin: 0;}
 
 dl,ol,ul,p,blockquote,pre {
