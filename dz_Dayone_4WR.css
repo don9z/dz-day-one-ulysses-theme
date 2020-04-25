@@ -1,0 +1,246 @@
+/*
+    dz_DayOne
+
+    A theme inherit from Day One Ulysses Theme.
+
+    Specifically change `em` tag from italic to normal underline style
+
+    ---- origin comment
+
+    Day One
+
+    A theme to mimic the [Day One](http://dayoneapp.com/) default theme.
+
+    Developed by Michael Diolosa <michael.diolosa@gmail.com>
+
+    Visit https://github.com/mbrio/day-one-ulysses-iii-theme for source code
+
+*/
+
+
+body {
+    font-size: 13pt;
+    color:#333;
+    background:#fff;
+    font-family: Avenir, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 10%;
+}
+
+h1 {
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.3em;
+    padding-top: 16px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+h2:after {
+    content: '';
+    display: block;
+    border: 1px solid #009688;
+    margin-top: 0.4em;
+    margin-bottom: 0.8em;
+}
+
+h2, h3, h4, h5, h6 {
+  line-height: 1.1em;
+  padding-top: 16px;
+  margin-bottom: 4px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+h4 {
+  font-weight: normal;
+  color: #999;
+  text-transform: uppercase;
+  font-size: .9em;
+}
+
+h5, h6 {
+  font-size: .8em;
+}
+
+h5 {
+  color: #339BCB;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-weight: normal;
+  color: #AAA;
+}
+
+/*
+mark {
+    text-decoration: underline;
+    background-color: transparent;
+}*/
+
+img {width: 100%; border-radius: 5px; display: block; margin: 0;}
+
+dl,ol,ul,p,blockquote,pre {
+    margin-top: 12px;
+    margin-bottom: 18px;
+}
+
+a:focus, a:hover {color:#EA4C89;text-decoration:none;}
+a {color:#1863A1;text-decoration:none;}
+blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    border-left: solid .2em #009688;
+    padding-left: 10px;
+    quotes: none;
+    color: #4a4a4a;
+    font-style: italic;
+}
+strong, dfn {font-weight:bold; color: #252525;}
+em, dfn {
+    text-decoration: underline;
+    font-style: normal;
+}
+
+del {color:#666;}
+pre {margin:1em 0;white-space:pre;}
+pre, code, tt {font:1em 'Bitstream Vera Sans Mono', Courier New, monospace;}
+
+pre {
+    background-color: #f8f8f8;
+    border: #E8E8E8 1px solid;
+    color: #444;
+    display: block;
+    margin: 12px 0;
+    overflow: auto;
+    padding: 6px 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    cursor: text;
+    max-width: 100%;
+    overflow: auto;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+code {
+    font-size: .95em;
+    color: #2c92b0;
+}
+
+p > code, li > code {
+    color: #606060;
+    border: 1px solid #E8E8E8;
+    font-size: 1em;
+    padding: 0 .3em;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+ol,ul {
+    margin: 0.4em 1em;
+    padding-left: .8em;
+}
+
+ol li {
+    margin-left: 1em;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
+ul li {
+    margin-left: 1em;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
+ol ol,ol ul,ul ol,ul ul {
+    margin: .3em 0;
+}
+
+ul {list-style-type:disc;}
+ol {list-style-type:decimal;}
+
+figure {margin: 1em 0;}
+figcaption {font-size: 0.75em;padding:0.5em 2em;margin-bottom: 2em;}
+figure img {margin-bottom: 0px;}
+
+hr {
+    border: 1px solid #009688;
+    display: block;
+    margin: 1em 0;
+}
+
+h1 + hr {margin-top: 2em;}
+
+ol p, ul p {margin-bottom: 0px; margin-top: 0.2em;}
+li {margin-bottom: 0.5em; margin-top: 0.5em;}
+
+ol#footnotes {
+    font-size: 0.9em;
+    padding-top: 0.2em;
+    margin-top: 1em;
+    margin-left: 0;
+    border-top: 1px solid #009688;
+    counter-reset: footer-counter;
+    list-style: none;
+}
+
+ol#footnotes li {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-weight: 400;
+    list-style: none;
+}
+
+ol#footnotes li:before {
+    content: counter(footer-counter) ". ";
+    counter-increment: footer-counter;
+    font-weight: 800;
+    font-size: .9em;
+}
+
+@keyframes highfade {
+    0% {
+        background-color: none;
+    }
+    20% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: none;
+    }
+}
+
+@-webkit-keyframes highfade {
+    0% {
+        background-color: none;
+    }
+    20% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: none;
+    }
+}
+
+a:target, ol#footnotes li:target, sup a:target  {
+    animation-name: highfade;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-name: highfade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+}
